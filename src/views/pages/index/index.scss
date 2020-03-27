@@ -136,7 +136,7 @@
     }
 
     .video {
-      display: none !important;
+      // display: none;
     }
 
     .chatBtn {
@@ -194,6 +194,7 @@
   height: 320px;
   overflow: hidden;
   background: #000;
+  display: none;
   border-radius: 10px;
   @include flex;
 
