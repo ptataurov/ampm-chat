@@ -1,0 +1,7 @@
+mixin btn({ label }, mixes)
+
+  - const data = require('views/components/btn/data.js')
+  - const css = require('views/components/btn/_css.json')
+
+  button(class=css.btn class=mixes)= label
+

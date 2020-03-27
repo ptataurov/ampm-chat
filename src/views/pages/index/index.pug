@@ -1,0 +1,62 @@
+extends ~@/layout
+block title
+  title
+
+block content
+
+  - const { list } = require('./data.js')
+  - const css = require('./_css.json')
+
+  div(id='index-pg' class=css.indexPg)
+    header(class=css.header)
+      div(class=css.headerContent)
+        h1(class=css.title) Обнови ванную комнату <br> в один клик!
+        div(class=css.headerGroup)
+          h2(class=css.subtitle) Онлайн-консультация <br> не выходя из дома!
+          a(class=css.link href='#')
+            img(class=css.linkBg src=require('./img/header-btn.svg'))
+
+    section(class=css.listSection)
+      h4(class=css.listTitle) Попробуйте прямо сейчас <br> и познакомьтесь с нами поближе!
+      ul(class=css.list)
+        each item in list
+          li(class=css.item)
+            img(class=css.itemImg src=item.img)
+            p(class=css.itemText)!= item.text
+      h6(class=css.listSubtitle) И все это — не выходя из дома! 
+    
+    section(class=css.chat)
+      h4(class=css.chatTitle) Cвободных операторов: <span id='_free'>5</span>
+      button(class=css.chatBtn)
+        span(class=css.outer)
+          span(class=css.inner)
+            span(class=css.icon)
+        | Позвонить
+
+      form(class=css.form class='hidden')
+        header(class=css.formHeader)
+          button(class=css.close)
+        
+        div(class=css.formGroup)
+          label(class=css.label) Ваше имя <span>*</span>
+          input(class=css.input type='text')
+
+        div(class=css.formGroup)
+          label(class=css.label) Номер телефона <span>*</span>
+          input(class=css.input type='text' placeholder='+7')
+        
+        div(class=css.checkbox)
+          label(class=css.checkboxLabel) Я даю согласие на обработку моих персональных данных
+            input(class=css.checkboxInput type='checkbox')
+
+        button(class=css.formBtn) Позвонить
+
+    footer(class=css.footer)
+      div(class=css.footerContent)
+        div(class=css.bar)
+          img(class=css.barImg src=require('./img/bar-bg.svg'))
+          div(class=css.barContent)
+            img(class=css.barIcon src=require('./img/bar-i.svg'))
+            span(class=css.barLabel) Мы за безопасные отношения!
+        
+        h4(class=css.footerTitle) Наших онлайн консультантов полюбит даже ваша собака!
