@@ -144,11 +144,14 @@
         transform: rotate(135deg);
       }
     }
+
+    .chatHeader {
+      display: flex;
+    }
   }
 }
 
 .chatHeader {
-  display: flex;
   padding: 24px;
 }
 
@@ -336,7 +339,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
