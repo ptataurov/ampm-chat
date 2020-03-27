@@ -25,11 +25,22 @@ block content
             p(class=css.itemText)!= item.text
       h6(class=css.listSubtitle) И все это — не выходя из дома! 
     
-    section(id='_chat' class=css.chat)
+    section(id='_chat' class=css.chat class='call')
+      video(class=css.bigVideo controls)
       h4(class=css.chatTitle) Cвободных операторов: <span id='_free'>5</span>
-      div(class=css.video)
+      div(class=css.video class='collapse')
+
         video(controls=true)
-        button(class=css.close)
+        header(class=css.chatHeader)
+          button(class=css.full)
+            span
+          button(class=css.close)
+      
+      header(class=css.chatHeader)
+        button(class=css.muteBtn)
+          img(src=require('./img/mute-i.svg'))
+        button(class=css.noVideoBtn)
+          img(src=require('./img/no-video-i.svg'))
       button(class=css.chatBtn)
         span(class=css.outer)
           span(class=css.inner)
