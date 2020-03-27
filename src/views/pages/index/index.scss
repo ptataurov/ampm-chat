@@ -156,6 +156,32 @@
     width: 100%;
     height: 100%;
   }
+
+  .close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: inline-block;
+      background: #fff;
+      position: absolute;
+    }
+
+    &:before {
+      transform: translateX(-50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
 }
 
 .chatBtn {
