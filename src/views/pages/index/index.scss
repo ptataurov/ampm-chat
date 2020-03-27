@@ -4,7 +4,7 @@
 }
 
 .header {
-  background: url(./img/header-bg.png) center no-repeat;
+  background: url(./img/header-bg.png) center bottom no-repeat;
   background-size: cover;
   min-height: 678px;
   margin-bottom: 90px;
@@ -127,6 +127,8 @@
   background-size: cover;
   min-height: 720px;
   padding: 0 24px;
+  position: relative;
+  z-index: 10;
 
   @media (max-width: calc(1280px - 48px)) {
     margin: 0 24px 90px;
@@ -187,12 +189,63 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: url(./img/phone-i.svg) center no-repeat;
+      background: url(./img/phone-i.svg) left center no-repeat;
       width: 24px;
       height: 24px;
       background-size: contain;
     }
   }
+}
+
+.footer {
+  min-height: 670px;
+  max-width: 1600px;
+  margin: -61px auto 0;
+  background: url(./img/footer-bg.png) center top no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.footerContent {
+  width: 50%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  position: relative;
+  @include flex;
+  margin-right: auto;
+  margin-bottom: 35px;
+}
+
+.barContent {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+
+.barLabel {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #ffffff;
+}
+
+.footerTitle {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+
+  color: #1c2e36;
 }
 
 // Global styles
@@ -219,6 +272,13 @@
     min-height: 460px;
     text-align: center;
     background-image: url(./img/header-bg-mobile.png);
+  }
+
+  .footer {
+    background-image: url(./img/footer-bg-mobile.png);
+
+    margin-top: 100px;
+    display: block;
   }
 
   .headerContent {
@@ -249,6 +309,25 @@
     br {
       display: none;
     }
+  }
+
+  .footerContent {
+    width: 100%;
+    text-align: center;
+    transform: translateY(-20%);
+  }
+
+  .footerTitle {
+    font-size: 24px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .bar {
+    margin: 0 auto 10px;
+    padding-top: 0;
   }
 }
 
