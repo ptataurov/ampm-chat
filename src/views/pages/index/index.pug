@@ -13,7 +13,7 @@ block content
         h1(class=css.title) Обнови ванную комнату <br> в один клик!
         div(class=css.headerGroup)
           h2(class=css.subtitle) Онлайн-консультация <br> не выходя из дома!
-          a(class=css.link href='#')
+          a(id='_link' class=css.link href='#')
             img(class=css.linkBg src=require('./img/header-btn.svg'))
 
     section(class=css.listSection)
@@ -25,7 +25,7 @@ block content
             p(class=css.itemText)!= item.text
       h6(class=css.listSubtitle) И все это — не выходя из дома! 
     
-    section(class=css.chat)
+    section(id='_chat' class=css.chat)
       h4(class=css.chatTitle) Cвободных операторов: <span id='_free'>5</span>
       button(class=css.chatBtn)
         span(class=css.outer)

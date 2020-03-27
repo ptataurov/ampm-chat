@@ -75,7 +75,11 @@ module.exports = (env, argv) => {
       }),
       new MiniCssExtractPlugin({
         filename: '[name].css'
-      })
+      }),
+      IS_DEV &&
+        new webpack.ProvidePlugin({
+          $: 'jquery'
+        })
     ].filter(Boolean)
   }
 }
